@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Engineer | Portfolio</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo"><i class="fa-solid => fa-brain"></i> AI<span>.Dev</span></a>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero section" id="hero">
+    <div class="hero-container">
+      <div class="hero-content reveal">
+        <span class="badge">Welcome to my universe</span>
+        <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+        <h2>I am a <span id="typing-text"></span><span class="cursor">&nbsp;</span></h2>
+        <p>Designing, training, and deploying intelligent machine learning systems & modern web solutions.</p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn primary-btn"><i class="fa-solid fa-code"></i> View Work</a>
+          <a href="#contact" class="btn secondary-btn"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-avatar reveal">
+        <div class="glass-card avatar-card">
+          <div class="avatar-img">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal">About <span>Me</span></h2>
+      <div class="glass-card about-card reveal">
+        <p>I am a passionate AI & Software Engineer focused on building scalable machine learning pipelines, deep learning models, and interactive software applications. I turn complex data into actionable intelligent solutions.</p>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>15+</h3>
+            <p>AI Projects</p>
+          </div>
+          <div class="stat-item">
+            <h3>98%</h3>
+            <p>Model Accuracy Avg</p>
+          </div>
+          <div class="stat-item">
+            <h3>3+</h3>
+            <p>Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal">Technical <span>Skills</span></h2>
+      <div class="skills-grid">
+        <div class="glass-card skill-box reveal">
+          <i class="fa-solid fa-brain skill-icon"></i>
+          <h3>Machine Learning & AI</h3>
+          <p>PyTorch, TensorFlow, Scikit-Learn, OpenCV, NLP, Computer Vision</p>
+        </div>
+        <div class="glass-card skill-box reveal">
+          <i class="fa-solid fa-database skill-icon"></i>
+          <h3>Data & Engineering</h3>
+          <p>Python, SQL, Pandas, NumPy, Data Mining, Feature Engineering</p>
+        </div>
+        <div class="glass-card skill-box reveal">
+          <i class="fa-solid fa-laptop-code skill-icon"></i>
+          <h3>Web & API Development</h3>
+          <p>HTML5, CSS3, JavaScript, Fast API, Flask, REST APIs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal">Featured <span>Projects</span></h2>
+      <div class="projects-grid">
+        
+        <!-- Project Card 1 -->
+        <div class="glass-card project-card reveal">
+          <!-- Slider Inside Project -->
+          <div class="project-slider" data-slider="1">
+            <div class="slides">
+              <div class="slide active">
+                <img src="https://picsum.photos/600/350?random=1" alt="Model Architecture">
+                <span class="slide-caption">Figure 1: Neural Network Architecture</span>
+              </div>
+              <div class="slide">
+                <img src="https://picsum.photos/600/350?random=2" alt="Confusion Matrix">
+                <span class="slide-caption">Figure 2: Classification Confusion Matrix</span>
+              </div>
+              <div class="slide">
+                <img src="https://picsum.photos/600/350?random=3" alt="Dashboard View">
+                <span class="slide-caption">Figure 3: Live Inference Dashboard</span>
+              </div>
+            </div>
+            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+
+          <div class="project-info">
+            <h3>Computer Vision Classifier</h3>
+            <p>CNN-based image recognition model achieving 96% accuracy on benchmark dataset with web inference API.</p>
+            <div class="project-tags">
+              <span>PyTorch</span>
+              <span>OpenCV</span>
+              <span>FastAPI</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" class="btn small-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" target="_blank" class="btn small-btn primary-btn"><i class="fa-solid fa-external-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="glass-card project-card reveal">
+          <!-- Slider Inside Project -->
+          <div class="project-slider" data-slider="2">
+            <div class="slides">
+              <div class="slide active">
+                <img src="https://picsum.photos/600/350?random=4" alt="NLP Pipeline">
+                <span class="slide-caption">Figure 1: Pipeline Workflow</span>
+              </div>
+              <div class="slide">
+                <img src="https://picsum.photos/600/350?random=5" alt="Analytics">
+                <span class="slide-caption">Figure 2: Sentiment Score Distributions</span>
+              </div>
+            </div>
+            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div>
+
+          <div class="project-info">
+            <h3>NLP Sentiment Analyzer</h3>
+            <p>Transformer-powered text analytics engine with real-time API streaming and sentiment tracking.</p>
+            <div class="project-tags">
+              <span>Transformers</span>
+              <span>Python</span>
+              <span>Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="#" target="_blank" class="btn small-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" target="_blank" class="btn small-btn primary-btn"><i class="fa-solid fa-external-link"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal">Get In <span>Touch</span></h2>
+      <div class="glass-card contact-card reveal">
+        <form id="contact-form" onsubmit="return false;">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+          </div>
+          <button type="submit" class="btn primary-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 AI Engineer Portfolio. Crafted with Glassmorphism.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
