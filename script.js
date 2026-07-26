@@ -106,4 +106,25 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+
+  // 5. Quick Direct Message via WhatsApp
+  const whatsappForm = document.getElementById("whatsapp-form");
+
+  if (whatsappForm) {
+    whatsappForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+
+      // Construct formatted URL message
+      const formattedMessage = `Hello Ahmed,%0A%0AMy Name: ${encodeURIComponent(name)}%0AMy Email: ${encodeURIComponent(email)}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
+
+      // Redirect directly to WhatsApp chat with predefined target number
+      const whatsappUrl = `https://wa.me/201126169033?text=${formattedMessage}`;
+
+      window.open(whatsappUrl, "_blank");
+    });
+  }
 });

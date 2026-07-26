@@ -214,28 +214,67 @@
       </div>
     </div>
   </section>
-
-  <!-- Contact Section -->
+<!-- Contact Section -->
   <section class="contact section" id="contact">
     <div class="container">
       <h2 class="section-title reveal">Get In <span>Touch</span></h2>
-      <div class="glass-card contact-card reveal">
-        <form id="contact-form" onsubmit="return false;">
-          <div class="form-group">
-            <input type="text" id="name" placeholder="Your Name" required>
+      
+      <div class="contact-wrapper">
+        <!-- Direct Contact Cards -->
+        <div class="contact-info">
+          <div class="glass-card contact-item reveal">
+            <i class="fa-solid fa-envelope contact-icon"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:ahmed365j@gmail.com">ahmed365j@gmail.com</a>
+            </div>
           </div>
-          <div class="form-group">
-            <input type="email" id="email" placeholder="Your Email" required>
+
+          <div class="glass-card contact-item reveal">
+            <i class="fa-brands fa-linkedin contact-icon"></i>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/ahmed-nasr-51b0242a4" target="_blank">Ahmed Nasr</a>
+            </div>
           </div>
-          <div class="form-group">
-            <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+
+          <div class="glass-card contact-item reveal">
+            <i class="fa-brands fa-whatsapp contact-icon"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/201126169033" target="_blank">+20 112 616 9033</a>
+            </div>
           </div>
-          <button type="submit" class="btn primary-btn"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
-        </form>
+
+          <div class="glass-card contact-item reveal">
+            <i class="fa-brands fa-telegram contact-icon"></i>
+            <div>
+              <h4>Telegram</h4>
+              <a href="https://t.me/201126169033" target="_blank">+20 112 616 9033</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Direct Message (WhatsApp Redirect) -->
+        <div class="glass-card contact-card reveal">
+          <h3>Send a Quick Message 💬</h3>
+          <p>Fill this form to start a direct WhatsApp chat with me instantly!</p>
+          <form id="whatsapp-form">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" rows="4" placeholder="Your Message..." required></textarea>
+            </div>
+            <button type="submit" class="btn primary-btn"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
-
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2026 AI Engineer Portfolio. Crafted with Glassmorphism.</p>
