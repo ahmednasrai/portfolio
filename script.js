@@ -75,10 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.addEventListener("scroll", handleScroll);
-  handleScroll(); // Trigger initial view
+  handleScroll();
 
-  // 4. Project Card Inner Sliders
+  // 4. Project Card Inner Sliders & Lightbox Integration
   const sliders = document.querySelectorAll(".project-slider");
+  const lightbox = document.getElementById("lightbox-modal");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const lightboxCaption = document.getElementById("lightbox-caption");
+  const lightboxClose = document.querySelector(".lightbox-close");
+  const lightboxPrev = document.querySelector(".lightbox-prev");
+  const lightboxNext = document.querySelector(".lightbox-next");
+
+  let currentSliderSlides = [];
+  let currentLightboxIndex = 0;
 
   sliders.forEach((slider) => {
     const slides = slider.querySelectorAll(".slide");
@@ -105,6 +114,64 @@ document.addEventListener("DOMContentLoaded", () => {
         showSlide(currentSlide);
       });
     }
+
+    // Open Lightbox on Image Click
+    slides.forEach((slide, slideIndex) => {
+      const img = slide.querySelector("img");
+      const caption = slide.querySelector(".slide-caption");
+
+      if (img) {
+        img.addEventListener("click", () => {
+          currentSliderSlides = Array.from(slides);
+          currentLightboxIndex = slideIndex;
+          openLightbox();
+        });
+      }
+    });
+  });
+
+  function openLightbox() {
+    const currentSlide = currentSliderSlides[currentLightboxIndex];
+    const img = currentSlide.querySelector("img");
+    const caption = currentSlide.querySelector(".slide-caption");
+
+    lightboxImg.src = img.src;
+    lightboxCaption.textContent = caption ? caption.textContent : "";
+    lightbox.classList.add("active");
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+  }
+
+  function nextLightboxImage() {
+    currentLightboxIndex = (currentLightboxIndex + 1) % currentSliderSlides.length;
+    openLightbox();
+  }
+
+  function prevLightboxImage() {
+    currentLightboxIndex = (currentLightboxIndex - 1 + currentSliderSlides.length) % currentSliderSlides.length;
+    openLightbox();
+  }
+
+  if (lightboxClose) lightboxClose.addEventListener("click", closeLightbox);
+  if (lightboxNext) lightboxNext.addEventListener("click", nextLightboxImage);
+  if (lightboxPrev) lightboxPrev.addEventListener("click", prevLightboxImage);
+
+  // Close when clicking outside image
+  if (lightbox) {
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  // Keyboard Navigation Support
+  document.addEventListener("keydown", (e) => {
+    if (lightbox && lightbox.classList.contains("active")) {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") nextLightboxImage();
+      if (e.key === "ArrowLeft") prevLightboxImage();
+    }
   });
 
   // 5. Quick Direct Message via WhatsApp
@@ -118,10 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const email = document.getElementById("email").value;
       const message = document.getElementById("message").value;
 
-      // Construct formatted URL message
       const formattedMessage = `Hello Ahmed,%0A%0AMy Name: ${encodeURIComponent(name)}%0AMy Email: ${encodeURIComponent(email)}%0A%0AMessage:%0A${encodeURIComponent(message)}`;
-
-      // Redirect directly to WhatsApp chat with predefined target number
       const whatsappUrl = `https://wa.me/201126169033?text=${formattedMessage}`;
 
       window.open(whatsappUrl, "_blank");
