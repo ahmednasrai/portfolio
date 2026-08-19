@@ -1,5 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const root = document.documentElement;
+
+  // 0. Theme toggle (initial state is set inline in <head> to avoid flash)
+  const STORAGE_KEY = "portfolio-theme";
+  const themeToggle = document.getElementById("theme-toggle");
+
+  function applyTheme(theme, persist = false) {
+    root.setAttribute("data-theme", theme);
+    if (themeToggle) {
+      themeToggle.setAttribute("aria-label", theme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    }
+    if (persist) {
+      try {
+        localStorage.setItem(STORAGE_KEY, theme);
+      } catch (e) {
+        /* storage unavailable — ignore */
+      }
+    }
+  }
+
+  if (themeToggle) {
+    applyTheme(root.getAttribute("data-theme") || "light");
+    themeToggle.addEventListener("click", () => {
+      const next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      applyTheme(next, true);
+    });
+  }
 
   // 1. Typing effect
   const words = ["AI & Machine Learning Engineer", "Deep Learning Developer", "Python & Data Specialist", "FastAPI & Computer Vision Builder"];
