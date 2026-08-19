@@ -113,6 +113,22 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn,
+.slider-btn,
+.theme-toggle,
+.nav-toggle,
+.lightbox-close,
+.lightbox-btn,
+.chip {
+  touch-action: manipulation;
 }
 
 body {
@@ -917,7 +933,7 @@ html[data-theme="dark"] .theme-icon-sun {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr));
   gap: 1.5rem;
 }
 
@@ -979,6 +995,7 @@ html[data-theme="dark"] .theme-icon-sun {
   background: var(--paper);
   font-size: 0.77rem;
   font-weight: 500;
+  line-height: 1.4;
   color: var(--ink-soft);
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s var(--ease);
 }
@@ -993,7 +1010,7 @@ html[data-theme="dark"] .theme-icon-sun {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 2rem;
 }
 
@@ -1041,6 +1058,8 @@ html[data-theme="dark"] .theme-icon-sun {
 .slide img {
   max-width: 100%;
   max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   border-radius: var(--r-sm);
   box-shadow: var(--shadow-sm);
@@ -1322,6 +1341,8 @@ html[data-theme="dark"] .theme-icon-sun {
 
 .lightbox-content {
   max-width: min(92vw, 1020px);
+  max-height: 88vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1424,6 +1445,10 @@ html[data-theme="dark"] .theme-icon-sun {
   .hero-inner {
     grid-template-columns: 1fr;
     gap: 3rem;
+  }
+
+  .nav-list {
+    gap: 1.4rem;
   }
 
   .hero-copy {
@@ -1549,6 +1574,60 @@ html[data-theme="dark"] .theme-icon-sun {
     border-top: 1px solid var(--line);
   }
 
+  .form-group input,
+  .form-group textarea {
+    font-size: 1rem;
+  }
+
+  /* Education card — mobile breathing room */
+  .edu-card {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .edu-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.35rem;
+  }
+
+  .edu-info h3 {
+    font-size: 1.15rem;
+    line-height: 1.35;
+    margin-bottom: 0.55rem;
+  }
+
+  .edu-institution {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .edu-duration {
+    margin-top: 0.45rem;
+    font-size: 0.84rem;
+  }
+
+  .edu-caption {
+    font-size: 0.78rem;
+  }
+
+  .edu-chips {
+    gap: 0.45rem;
+  }
+
+  .edu-chips .chip {
+    font-size: 0.73rem;
+    padding: 0.28rem 0.7rem;
+  }
+
+  .gpa-badge {
+    padding: 0.7rem 1.1rem;
+  }
+
+  .gpa-value {
+    font-size: 1.9rem;
+  }
+
   .slide-caption {
     display: none;
   }
@@ -1560,6 +1639,18 @@ html[data-theme="dark"] .theme-icon-sun {
     align-items: stretch;
     width: 100%;
     max-width: 22rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 12vw, 3.1rem);
+  }
+
+  .hero-role {
+    font-size: 1.05rem;
+  }
+
+  .hero-lead {
+    font-size: 0.98rem;
   }
 
   .gpa-value {
@@ -1577,6 +1668,48 @@ html[data-theme="dark"] .theme-icon-sun {
   .footer-inner {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .overline {
+    letter-spacing: 0.11em;
+  }
+
+  .hero-title {
+    font-size: 2.35rem;
+    letter-spacing: -0.02em;
+  }
+
+  .section-title {
+    font-size: 1.72rem;
+  }
+
+  .profile-stats {
+    gap: 0;
+  }
+
+  .profile-stat strong {
+    font-size: 1.15rem;
+  }
+
+  .lightbox-close {
+    top: 0.9rem;
+    right: 0.9rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightbox-prev {
+    left: 0.9rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightbox-next {
+    right: 0.9rem;
+    width: 40px;
+    height: 40px;
   }
 }
 
