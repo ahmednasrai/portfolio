@@ -3,376 +3,487 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Engineer | Portfolio</title>
-  <!-- Google Fonts & Font Awesome Icons -->
+  <meta name="description" content="Portfolio of Ahmed Nasr — AI & Machine Learning Engineer building intelligent, human-centered systems.">
+  <title>Ahmed Nasr — AI Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Sticky Navbar -->
-  <header class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="logo"><i class="fa-solid => fa-brain"></i> AI<span>.Dev</span></a>
-      <div class="menu-toggle" id="menu-toggle">
-        <i class="fa-solid fa-bars"></i>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#hero" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-bar">
+      <a href="#top" class="brand" aria-label="Ahmed Nasr — home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span class="brand-name">Ahmed&nbsp;Nasr</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#top" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero section" id="hero">
-    <div class="hero-container">
-      <div class="hero-content reveal">
-        <span class="badge">Welcome to my universe</span>
-        <h1>Hi, I'm <span class="highlight">Ahmed</span></h1>
-        <h2>I am a <span id="typing-text"></span><span class="cursor">&nbsp;</span></h2>
-        <p>Designing, training, and deploying intelligent machine learning systems & modern web solutions.</p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn primary-btn"><i class="fa-solid fa-code"></i> View Work</a>
-          <a href="#contact" class="btn secondary-btn"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
+  <main id="main">
+
+    <!-- Hero -->
+    <section class="hero section" id="top">
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="overline">AI Engineer &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; Software</p>
+          <h1 class="hero-title">Hi, I'm <em>Ahmed</em> —<br>I build things that <br><span class="typing-line">learn from <span class="typing-tinted">data</span></span></h1>
+          <p class="hero-role">I'm a <span id="typing-text" aria-live="polite"></span><span class="caret" aria-hidden="true"></span></p>
+          <p class="hero-lead">Designing, training, and deploying intelligent machine-learning systems and modern, human-centered web solutions.</p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-code" aria-hidden="true"></i> View Work</a>
+            <a href="#contact" class="btn btn-ghost"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact Me</a>
+          </div>
+          <ul class="hero-tools" aria-label="Core technologies">
+            <li>Python</li>
+            <li>PyTorch</li>
+            <li>TensorFlow</li>
+            <li>FastAPI</li>
+            <li>Computer Vision</li>
+          </ul>
+        </div>
+
+        <aside class="profile-card reveal" aria-label="Profile summary">
+          <div class="profile-head">
+            <span class="avatar-tile" aria-hidden="true"><i class="fa-solid fa-robot"></i></span>
+            <div class="profile-id">
+              <h2>Ahmed Nasr</h2>
+              <p>AI &amp; Machine Learning Engineer</p>
+            </div>
+          </div>
+          <p class="app-status"><span class="status-dot" aria-hidden="true"></span> Available for new projects</p>
+          <div class="profile-stats">
+            <div class="profile-stat">
+              <strong>15+</strong>
+              <span>AI projects</span>
+            </div>
+            <div class="profile-stat">
+              <strong>98%</strong>
+              <span>Avg. accuracy</span>
+            </div>
+            <div class="profile-stat">
+              <strong>3+</strong>
+              <span>Years building</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="overline"><span class="overline-num">01</span> About</p>
+          <h2 class="section-title">From raw data to <em>deployed, working product</em> — I care about the whole arc.</h2>
+        </header>
+
+        <div class="about-grid reveal">
+          <div class="about-prose">
+            <p>I'm a passionate AI &amp; Software Engineer focused on building scalable machine-learning pipelines, deep-learning models, and interactive software applications. I turn complex data into actionable, intelligent solutions — and I obsess over the details that make them usable in the real world.</p>
+            <p>From feature engineering to model evaluation to a clean API your product team can actually ship with — I enjoy being hands-on at every stage.</p>
+          </div>
+          <dl class="stats-panel">
+            <div class="stat">
+              <dt>Projects delivered</dt>
+              <dd><span class="stat-value">15+</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Average model accuracy</dt>
+              <dd><span class="stat-value">98%</span></dd>
+            </div>
+            <div class="stat">
+              <dt>Years of experience</dt>
+              <dd><span class="stat-value">3+</span></dd>
+            </div>
+          </dl>
         </div>
       </div>
-      <div class="hero-avatar reveal">
-        <div class="glass-card avatar-card">
-          <div class="avatar-img">
-            <i class="fa-solid fa-robot"></i>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="overline"><span class="overline-num">02</span> Skills</p>
+          <h2 class="section-title">What I work with <em>every day</em></h2>
+        </header>
+
+        <div class="skills-grid">
+          <article class="card skill-card reveal">
+            <span class="icon-tile" aria-hidden="true"><i class="fa-solid fa-brain"></i></span>
+            <h3>Machine Learning &amp; AI</h3>
+            <p>Training robust models and pushing them to production with a measurable, testable approach.</p>
+            <ul class="chip-list">
+              <li class="chip">PyTorch</li>
+              <li class="chip">TensorFlow</li>
+              <li class="chip">Scikit-Learn</li>
+              <li class="chip">OpenCV</li>
+              <li class="chip">NLP</li>
+              <li class="chip">Computer Vision</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <span class="icon-tile" aria-hidden="true"><i class="fa-solid fa-database"></i></span>
+            <h3>Data &amp; Engineering</h3>
+            <p>Cleaning, shaping, and extracting value from data before a single model is ever trained.</p>
+            <ul class="chip-list">
+              <li class="chip">Python</li>
+              <li class="chip">SQL</li>
+              <li class="chip">Pandas</li>
+              <li class="chip">NumPy</li>
+              <li class="chip">Data Mining</li>
+              <li class="chip">Feature Engineering</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <span class="icon-tile" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span>
+            <h3>Web &amp; API Development</h3>
+            <p>Wrapping intelligence in fast, well-documented interfaces that teams love to integrate.</p>
+            <ul class="chip-list">
+              <li class="chip">HTML5</li>
+              <li class="chip">CSS3</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">FastAPI</li>
+              <li class="chip">Streamlit</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section section-alt" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="overline"><span class="overline-num">03</span> Projects</p>
+          <h2 class="section-title">Selected <em>work</em></h2>
+        </header>
+
+        <div class="projects-grid">
+
+          <!-- House Price Prediction -->
+          <article class="card project-card reveal">
+            <div class="project-media">
+              <div class="project-slider" role="group" aria-label="House Price Prediction App screenshots">
+                <div class="slides">
+                  <div class="slide active">
+                    <img src="images/kc-house/1.jpeg" alt="House Features Inputs" loading="lazy">
+                    <span class="slide-caption">Figure 1: Application UI &amp; Primary Inputs</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/kc-house/2.jpeg" alt="Secondary Features Inputs" loading="lazy">
+                    <span class="slide-caption">Figure 2: Secondary House Properties</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/kc-house/3.jpeg" alt="House Price Prediction Result" loading="lazy">
+                    <span class="slide-caption">Figure 3: Estimated Price Output</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/kc-house/actual vs predicted.jpg" alt="Actual vs Predicted Prices Plot" loading="lazy">
+                    <span class="slide-caption">Figure 4: Actual vs Predicted Prices Plot</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/kc-house/evaluate.jpg" alt="Model Evaluation Score" loading="lazy">
+                    <span class="slide-caption">Figure 5: Gradient Boosting Regressor R&sup2; Score</span>
+                  </div>
+                </div>
+              </div>
+              <div class="media-controls">
+                <span class="slide-count" aria-live="polite">1 / 5</span>
+                <div class="media-buttons">
+                  <button class="slider-btn prev-btn" aria-label="Previous screenshot"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                  <button class="slider-btn next-btn" aria-label="Next screenshot"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3>House Price Prediction App</h3>
+              <p>End-to-end ML web application using Gradient Boosting to estimate house market prices from structural and geographical features — R&sup2; score of 92.2%.</p>
+              <ul class="chip-list">
+                <li class="chip">Python</li>
+                <li class="chip">Scikit-Learn</li>
+                <li class="chip">Gradient Boosting</li>
+                <li class="chip">Streamlit</li>
+                <li class="chip">Pandas</li>
+              </ul>
+              <a href="https://github.com/ahmednasrai/kc-house-price-prediction" target="_blank" rel="noopener" class="btn btn-ghost btn-small"><i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub</a>
+            </div>
+          </article>
+
+          <!-- Plant Disease Classifier -->
+          <article class="card project-card reveal">
+            <div class="project-media">
+              <div class="project-slider" role="group" aria-label="AI Plant Disease Classifier screenshots">
+                <div class="slides">
+                  <div class="slide active">
+                    <img src="images/planet-disease/accuracy.jpg" alt="Training Accuracy and Loss History" loading="lazy">
+                    <span class="slide-caption">Figure 1: EfficientNetB0 Training vs Validation Performance</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/planet-disease/0.jpg" alt="Model Training Epochs Log" loading="lazy">
+                    <span class="slide-caption">Figure 2: Transfer Learning Training Logs (89% Val Accuracy)</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/planet-disease/1.jpg" alt="FastAPI Swagger UI Endpoint" loading="lazy">
+                    <span class="slide-caption">Figure 3: FastAPI REST Endpoint (/predict) Interface</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/planet-disease/2.jpg" alt="Inference Response - Corn Common Rust" loading="lazy">
+                    <span class="slide-caption">Figure 4: Real-time API Response (Corn Rust - 100% Confidence)</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/planet-disease/49331.jpg" alt="Test Sample Leaf - Corn Leaf" loading="lazy">
+                    <span class="slide-caption">Figure 5: Input Sample - Infected Corn Leaf</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/planet-disease/3.jpg" alt="FastAPI Swagger UI Endpoint 2" loading="lazy">
+                    <span class="slide-caption">Figure 6: API Testing with Apple Brown Spot Sample</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/planet-disease/4.jpg" alt="Inference Response - Apple Brown Spot" loading="lazy">
+                    <span class="slide-caption">Figure 7: API Response Output (Apple Spot - 99.7% Confidence)</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/planet-disease/113200.jpg" alt="Test Sample Leaf - Apple Leaf" loading="lazy">
+                    <span class="slide-caption">Figure 8: Input Sample - Infected Apple Leaf</span>
+                  </div>
+                </div>
+              </div>
+              <div class="media-controls">
+                <span class="slide-count" aria-live="polite">1 / 8</span>
+                <div class="media-buttons">
+                  <button class="slider-btn prev-btn" aria-label="Previous screenshot"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                  <button class="slider-btn next-btn" aria-label="Next screenshot"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3>AI Plant Disease Classifier &amp; API</h3>
+              <p>Computer vision pipeline using EfficientNetB0 transfer learning to classify 70+ plant diseases at 89% accuracy, deployed behind a FastAPI backend.</p>
+              <ul class="chip-list">
+                <li class="chip">TensorFlow</li>
+                <li class="chip">EfficientNetB0</li>
+                <li class="chip">FastAPI</li>
+                <li class="chip">Transfer Learning</li>
+                <li class="chip">Python</li>
+              </ul>
+              <a href="https://github.com/ahmednasrai/plant-disease-classification" target="_blank" rel="noopener" class="btn btn-ghost btn-small"><i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub</a>
+            </div>
+          </article>
+
+          <!-- Vehicle Detection & Counting -->
+          <article class="card project-card reveal">
+            <div class="project-media">
+              <div class="project-slider" role="group" aria-label="Vehicle Detection and Counting API screenshots">
+                <div class="slides">
+                  <div class="slide active">
+                    <img src="images/vehicle-detection/1.jpg" alt="YOLO Vehicle Detection Bounding Boxes" loading="lazy">
+                    <span class="slide-caption">Figure 1: Object Detection Output with Bounding Boxes &amp; Confidence</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/vehicle-detection/2.png" alt="FastAPI Vehicle Detection API Interface" loading="lazy">
+                    <span class="slide-caption">Figure 2: Vehicle Detection &amp; Counting API (/detect) Endpoint</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/vehicle-detection/3.jpg" alt="API Response JSON Vehicle Counts" loading="lazy">
+                    <span class="slide-caption">Figure 3: Real-time API Response JSON with Vehicle Class Breakdown</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/vehicle-detection/4.jpg" alt="Tested Sample Traffic Image" loading="lazy">
+                    <span class="slide-caption">Figure 4: Tested Traffic Input Image</span>
+                  </div>
+                </div>
+              </div>
+              <div class="media-controls">
+                <span class="slide-count" aria-live="polite">1 / 4</span>
+                <div class="media-buttons">
+                  <button class="slider-btn prev-btn" aria-label="Previous screenshot"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                  <button class="slider-btn next-btn" aria-label="Next screenshot"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3>Vehicle Detection &amp; Counting API</h3>
+              <p>Real-time computer vision system powered by YOLO that detects and counts traffic (cars, buses, trucks, motorcycles) via a FastAPI REST endpoint.</p>
+              <ul class="chip-list">
+                <li class="chip">YOLO</li>
+                <li class="chip">Computer Vision</li>
+                <li class="chip">FastAPI</li>
+                <li class="chip">OpenCV</li>
+                <li class="chip">Python</li>
+              </ul>
+              <a href="https://github.com/ahmednasrai/vehicle-detection-and-counting" target="_blank" rel="noopener" class="btn btn-ghost btn-small"><i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub</a>
+            </div>
+          </article>
+
+          <!-- Receipt OCR -->
+          <article class="card project-card reveal">
+            <div class="project-media">
+              <div class="project-slider" role="group" aria-label="Receipt OCR Extraction API screenshots">
+                <div class="slides">
+                  <div class="slide active">
+                    <img src="images/receipt-ocr/1.jpg" alt="EasyOCR Reader Initialization" loading="lazy">
+                    <span class="slide-caption">Figure 1: EasyOCR Pipeline Setup &amp; GPU Acceleration</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/receipt-ocr/2.jpg" alt="OCR Reader Code Loop" loading="lazy">
+                    <span class="slide-caption">Figure 2: Text Detection &amp; Confidence Score Extractor</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/receipt-ocr/3.jpg" alt="Extracted Text with Confidence Scores" loading="lazy">
+                    <span class="slide-caption">Figure 3: Raw Detected Text &amp; Confidence Breakdown</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/receipt-ocr/4.jpg" alt="FastAPI Receipt OCR Endpoint" loading="lazy">
+                    <span class="slide-caption">Figure 4: FastAPI OpenAPI (/extract) Endpoint Interface</span>
+                  </div>
+                  <div class="slide">
+                    <img src="images/receipt-ocr/5.jpg" alt="Structured Receipt JSON Output" loading="lazy">
+                    <span class="slide-caption">Figure 5: Parsed JSON Output (Store, Total, Cash, Items)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="media-controls">
+                <span class="slide-count" aria-live="polite">1 / 5</span>
+                <div class="media-buttons">
+                  <button class="slider-btn prev-btn" aria-label="Previous screenshot"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+                  <button class="slider-btn next-btn" aria-label="Next screenshot"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <h3>Receipt OCR &amp; Parsed Text API</h3>
+              <p>Computer vision pipeline using EasyOCR and regex parsing to extract structured JSON — store name, items, total, cash received — served via FastAPI.</p>
+              <ul class="chip-list">
+                <li class="chip">EasyOCR</li>
+                <li class="chip">Computer Vision</li>
+                <li class="chip">FastAPI</li>
+                <li class="chip">Regex Parsing</li>
+                <li class="chip">Python</li>
+              </ul>
+              <a href="https://github.com/ahmednasrai/receipt-ocr-extraction" target="_blank" rel="noopener" class="btn btn-ghost btn-small"><i class="fa-brands fa-github" aria-hidden="true"></i> View on GitHub</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="overline"><span class="overline-num">04</span> Contact</p>
+          <h2 class="section-title">Let's <em>build</em> something together</h2>
+        </header>
+
+        <div class="contact-grid reveal">
+          <div class="contact-info">
+            <a class="contact-item" href="mailto:ahmed365j@gmail.com">
+              <span class="icon-tile" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+              <span class="contact-text">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">ahmed365j@gmail.com</span>
+              </span>
+            </a>
+
+            <a class="contact-item" href="https://www.linkedin.com/in/ahmed-nasr-51b0242a4" target="_blank" rel="noopener">
+              <span class="icon-tile" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
+              <span class="contact-text">
+                <span class="contact-label">LinkedIn</span>
+                <span class="contact-value">Ahmed Nasr</span>
+              </span>
+            </a>
+
+            <a class="contact-item" href="https://wa.me/201126169033" target="_blank" rel="noopener">
+              <span class="icon-tile" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></span>
+              <span class="contact-text">
+                <span class="contact-label">WhatsApp</span>
+                <span class="contact-value">+20 112 616 9033</span>
+              </span>
+            </a>
+
+            <a class="contact-item" href="https://t.me/201126169033" target="_blank" rel="noopener">
+              <span class="icon-tile" aria-hidden="true"><i class="fa-brands fa-telegram"></i></span>
+              <span class="contact-text">
+                <span class="contact-label">Telegram</span>
+                <span class="contact-value">+20 112 616 9033</span>
+              </span>
+            </a>
+          </div>
+
+          <div class="card contact-card">
+            <h3>Send a quick message</h3>
+            <p>Fill this in and it opens a direct WhatsApp chat with me — no sign-up, no waiting.</p>
+            <form id="whatsapp-form" novalidate>
+              <div class="form-group">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Doe" autocomplete="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" autocomplete="email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell me about your project…" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Send via WhatsApp</button>
+            </form>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- About Section -->
-  <section class="about section" id="about">
-    <div class="container">
-      <h2 class="section-title reveal">About <span>Me</span></h2>
-      <div class="glass-card about-card reveal">
-        <p>I am a passionate AI & Software Engineer focused on building scalable machine learning pipelines, deep learning models, and interactive software applications. I turn complex data into actionable intelligent solutions.</p>
-        <div class="stats-grid">
-          <div class="stat-item">
-            <h3>15+</h3>
-            <p>AI Projects</p>
-          </div>
-          <div class="stat-item">
-            <h3>98%</h3>
-            <p>Model Accuracy Avg</p>
-          </div>
-          <div class="stat-item">
-            <h3>3+</h3>
-            <p>Years Experience</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section class="skills section" id="skills">
-    <div class="container">
-      <h2 class="section-title reveal">Technical <span>Skills</span></h2>
-      <div class="skills-grid">
-        <div class="glass-card skill-box reveal">
-          <i class="fa-solid fa-brain skill-icon"></i>
-          <h3>Machine Learning & AI</h3>
-          <p>PyTorch, TensorFlow, Scikit-Learn, OpenCV, NLP, Computer Vision</p>
-        </div>
-        <div class="glass-card skill-box reveal">
-          <i class="fa-solid fa-database skill-icon"></i>
-          <h3>Data & Engineering</h3>
-          <p>Python, SQL, Pandas, NumPy, Data Mining, Feature Engineering</p>
-        </div>
-        <div class="glass-card skill-box reveal">
-          <i class="fa-solid fa-laptop-code skill-icon"></i>
-          <h3>Web & API Development</h3>
-          <p>HTML5, CSS3, JavaScript, Fast API, Streamlit</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="projects section" id="projects">
-    <div class="container">
-      <h2 class="section-title reveal">Featured <span>Projects</span></h2>
-      <div class="projects-grid">
-        
-        <!-- Project Card: House Price Prediction App -->
-        <div class="glass-card project-card reveal">
-          <!-- Slider Inside Project -->
-          <div class="project-slider">
-            <div class="slides">
-              <div class="slide active">
-                <img src="images/kc-house/1.jpeg" alt="House Features Inputs">
-                <span class="slide-caption">Figure 1: Application UI & Primary Inputs</span>
-              </div>
-              <div class="slide">
-                <img src="images/kc-house/2.jpeg" alt="Secondary Features Inputs">
-                <span class="slide-caption">Figure 2: Secondary House Properties</span>
-              </div>
-              <div class="slide">
-                <img src="images/kc-house/3.jpeg" alt="House Price Prediction Result">
-                <span class="slide-caption">Figure 3: Estimated Price Output</span>
-              </div>
-              <div class="slide">
-                <img src="images/kc-house/actual vs predicted.jpg" alt="Actual vs Predicted Prices Plot">
-                <span class="slide-caption">Figure 4: Actual vs Predicted Prices Plot</span>
-              </div>
-              <div class="slide">
-                <img src="images/kc-house/evaluate.jpg" alt="Model Evaluation Score">
-                <span class="slide-caption">Figure 5: Gradient Boosting Regressor R² Score</span>
-              </div>
-            </div>
-            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
-
-          <div class="project-info">
-            <h3>House Price Prediction App</h3>
-            <p>End-to-end Machine Learning web application using Gradient Boosting Regressor to estimate house market prices based on structural and geographical features with an R² score of 92.2%.</p>
-            <div class="project-tags">
-              <span>Python</span>
-              <span>Scikit-Learn</span>
-              <span>Gradient Boosting</span>
-              <span>Streamlit</span>
-              <span>Pandas</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/ahmednasrai/kc-house-price-prediction" target="_blank" class="btn small-btn"><i class="fa-brands fa-github"></i> GitHub</a>            </div>
-          </div>
-        </div>
-        
-       <!-- Project Card 2: Plant Disease Classifier AI -->
-        <div class="glass-card project-card reveal">
-          <!-- Slider Inside Project -->
-          <div class="project-slider">
-            <div class="slides">
-              <div class="slide active">
-                <img src="images/planet-disease/accuracy.jpg" alt="Training Accuracy and Loss History">
-                <span class="slide-caption">Figure 1: EfficientNetB0 Training vs Validation Performance</span>
-              </div>
-              <div class="slide">
-                <img src="images/planet-disease/0.jpg" alt="Model Training Epochs Log">
-                <span class="slide-caption">Figure 2: Transfer Learning Training Logs (89% Val Accuracy)</span>
-              </div>
-              <div class="slide">
-                <img src="images/planet-disease/1.jpg" alt="FastAPI Swagger UI Endpoint">
-                <span class="slide-caption">Figure 3: FastAPI REST Endpoint (/predict) Interface</span>
-              </div>
-              <div class="slide">
-                <img src="images/planet-disease/2.jpg" alt="Inference Response - Corn Common Rust">
-                <span class="slide-caption">Figure 4: Real-time API Response (Corn Rust - 100% Confidence)</span>
-              </div>
-              <div class="slide">
-                <img src="images/planet-disease/49331.jpg" alt="Test Sample Leaf - Corn Leaf">
-                <span class="slide-caption">Figure 5: Input Sample - Infected Corn Leaf</span>
-              </div>
-              <div class="slide">
-                <img src="images/planet-disease/3.jpg" alt="FastAPI Swagger UI Endpoint 2">
-                <span class="slide-caption">Figure 6: API Testing with Apple Brown Spot Sample</span>
-              </div>
-              <div class="slide">
-                <img src="images/planet-disease/4.jpg" alt="Inference Response - Apple Brown Spot">
-                <span class="slide-caption">Figure 7: API Response Output (Apple Spot - 99.7% Confidence)</span>
-              </div>
-              <div class="slide">
-                <img src="images/planet-disease/113200.jpg" alt="Test Sample Leaf - Apple Leaf">
-                <span class="slide-caption">Figure 8: Input Sample - Infected Apple Leaf</span>
-              </div>
-            </div>
-            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
-
-          <div class="project-info">
-            <h3>AI Plant Disease Classifier & API</h3>
-            <p>Computer Vision pipeline leveraging EfficientNetB0 Transfer Learning to classify 70+ plant diseases with 89% accuracy, deployed via a high-performance FastAPI backend.</p>
-            <div class="project-tags">
-              <span>TensorFlow</span>
-              <span>EfficientNetB0</span>
-              <span>FastAPI</span>
-              <span>Transfer Learning</span>
-              <span>Python</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/ahmednasrai/plant-disease-classification" target="_blank" class="btn small-btn"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </div>
-        <!-- Project Card 3: Vehicle Detection & Counting API -->
-        <div class="glass-card project-card reveal">
-          <!-- Slider Inside Project -->
-          <div class="project-slider">
-            <div class="slides">
-              <div class="slide active">
-                <img src="images/vehicle-detection/1.jpg" alt="YOLO Vehicle Detection Bounding Boxes">
-                <span class="slide-caption">Figure 1: Object Detection Output with Bounding Boxes & Confidence</span>
-              </div>
-              <div class="slide">
-                <img src="images/vehicle-detection/2.png" alt="FastAPI Vehicle Detection API Interface">
-                <span class="slide-caption">Figure 2: Vehicle Detection & Counting API (/detect) Endpoint</span>
-              </div>
-              <div class="slide">
-                <img src="images/vehicle-detection/3.jpg" alt="API Response JSON Vehicle Counts">
-                <span class="slide-caption">Figure 3: Real-time API Response JSON with Vehicle Class Breakdown</span>
-              </div>
-              <div class="slide">
-                <img src="images/vehicle-detection/4.jpg" alt="Tested Sample Traffic Image">
-                <span class="slide-caption">Figure 4: Tested Traffic Input Image</span>
-              </div>
-            </div>
-            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
-
-          <div class="project-info">
-            <h3>Vehicle Detection & Counting API</h3>
-            <p>Real-time Computer Vision system powered by YOLO for detecting and counting traffic vehicles (cars, buses, trucks, motorcycles) deployed with FastAPI REST endpoint.</p>
-            <div class="project-tags">
-              <span>YOLO</span>
-              <span>Computer Vision</span>
-              <span>FastAPI</span>
-              <span>OpenCV</span>
-              <span>Python</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/ahmednasrai/vehicle-detection-and-counting" target="_blank" class="btn small-btn"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </div>
-        <!-- Project Card 4: Receipt OCR Extraction API -->
-        <div class="glass-card project-card reveal">
-          <!-- Slider Inside Project -->
-          <div class="project-slider">
-            <div class="slides">
-              <div class="slide active">
-                <img src="images/receipt-ocr/1.jpg" alt="EasyOCR Reader Initialization">
-                <span class="slide-caption">Figure 1: EasyOCR Pipeline Setup & GPU Acceleration</span>
-              </div>
-              <div class="slide">
-                <img src="images/receipt-ocr/2.jpg" alt="OCR Reader Code Loop">
-                <span class="slide-caption">Figure 2: Text Detection & Confidence Score Extractor</span>
-              </div>
-              <div class="slide">
-                <img src="images/receipt-ocr/3.jpg" alt="Extracted Text with Confidence Scores">
-                <span class="slide-caption">Figure 3: Raw Detected Text & Confidence Breakdown</span>
-              </div>
-              <div class="slide">
-                <img src="images/receipt-ocr/4.jpg" alt="FastAPI Receipt OCR Endpoint">
-                <span class="slide-caption">Figure 4: FastAPI OpenAPI (/extract) Endpoint Interface</span>
-              </div>
-              <div class="slide">
-                <img src="images/receipt-ocr/5.jpg" alt="Structured Receipt JSON Output">
-                <span class="slide-caption">Figure 5: Parsed JSON Output (Store, Total, Cash, Items)</span>
-              </div>
-            </div>
-            <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
-          </div>
-
-          <div class="project-info">
-            <h3>Receipt OCR & Parsed Text API</h3>
-            <p>End-to-end Computer Vision pipeline using EasyOCR & Regex parsing to extract structured JSON data (store name, purchased items, total, cash, change) deployed with FastAPI.</p>
-            <div class="project-tags">
-              <span>EasyOCR</span>
-              <span>Computer Vision</span>
-              <span>FastAPI</span>
-              <span>Regex Parsing</span>
-              <span>Python</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/ahmednasrai/receipt-ocr-extraction" target="_blank" class="btn small-btn"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<!-- Contact Section -->
-  <section class="contact section" id="contact">
-    <div class="container">
-      <h2 class="section-title reveal">Get In <span>Touch</span></h2>
-      
-      <div class="contact-wrapper">
-        <!-- Direct Contact Cards -->
-        <div class="contact-info">
-          <div class="glass-card contact-item reveal">
-            <i class="fa-solid fa-envelope contact-icon"></i>
-            <div>
-              <h4>Email</h4>
-              <a href="mailto:ahmed365j@gmail.com">ahmed365j@gmail.com</a>
-            </div>
-          </div>
-
-          <div class="glass-card contact-item reveal">
-            <i class="fa-brands fa-linkedin contact-icon"></i>
-            <div>
-              <h4>LinkedIn</h4>
-              <a href="https://www.linkedin.com/in/ahmed-nasr-51b0242a4" target="_blank">Ahmed Nasr</a>
-            </div>
-          </div>
-
-          <div class="glass-card contact-item reveal">
-            <i class="fa-brands fa-whatsapp contact-icon"></i>
-            <div>
-              <h4>WhatsApp</h4>
-              <a href="https://wa.me/201126169033" target="_blank">+20 112 616 9033</a>
-            </div>
-          </div>
-
-          <div class="glass-card contact-item reveal">
-            <i class="fa-brands fa-telegram contact-icon"></i>
-            <div>
-              <h4>Telegram</h4>
-              <a href="https://t.me/201126169033" target="_blank">+20 112 616 9033</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Quick Direct Message (WhatsApp Redirect) -->
-        <div class="glass-card contact-card reveal">
-          <h3>Send a Quick Message 💬</h3>
-          <p>Fill this form to start a direct WhatsApp chat with me instantly!</p>
-          <form id="whatsapp-form">
-            <div class="form-group">
-              <input type="text" id="name" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" id="email" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <textarea id="message" rows="4" placeholder="Your Message..." required></textarea>
-            </div>
-            <button type="submit" class="btn primary-btn"><i class="fa-brands fa-whatsapp"></i> Send via WhatsApp</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
   <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2026 AI Engineer Portfolio. Crafted with Glassmorphism.</p>
-  </footer>
-<!-- Lightbox Modal for Fullscreen Image View -->
-  <div id="lightbox-modal" class="lightbox">
-    <span class="lightbox-close">&times;</span>
-    <button class="lightbox-btn lightbox-prev"><i class="fa-solid fa-chevron-left"></i></button>
-    <div class="lightbox-content">
-      <img id="lightbox-img" src="" alt="Enlarged Image">
-      <p id="lightbox-caption" class="lightbox-caption"></p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> Ahmed Nasr. AI Engineer Portfolio.</p>
+      <a href="#top" class="to-top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Back to top</a>
     </div>
-    <button class="lightbox-btn lightbox-next"><i class="fa-solid fa-chevron-right"></i></button>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox-modal" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="lightbox-close" aria-label="Close preview"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+    <button class="lightbox-btn lightbox-prev" aria-label="Previous image"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="Enlarged image preview">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+      <p id="lightbox-count" class="lightbox-count"></p>
+    </div>
+    <button class="lightbox-btn lightbox-next" aria-label="Next image"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
