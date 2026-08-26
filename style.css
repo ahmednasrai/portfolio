@@ -484,6 +484,26 @@ html[data-theme="dark"] .theme-icon-sun {
   transform: translateY(0) scale(0.97);
 }
 
+/* Resume button — accent outline, third tier in the CTA group */
+.btn-resume {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-tint);
+}
+
+.btn-resume:hover {
+  transform: translateY(-2px);
+  background: var(--accent);
+  color: var(--surface);
+  border-color: var(--accent);
+  box-shadow: 0 4px 14px -4px var(--accent-glow);
+}
+
+.btn-resume:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: none;
+}
+
 .btn-small {
   padding: 0.52rem 0.95rem;
   font-size: 0.85rem;
